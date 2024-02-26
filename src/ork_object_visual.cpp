@@ -129,6 +129,8 @@ namespace vision_msgs_visualization
         name_->setVisible(true);
         name_->setLocalTranslation(Ogre::Vector3(0.1, 0, 0));
       }
+      object_node_->setScale(object.bbox.size.x*10, object.bbox.size.y*10, object.bbox.size.z*10);
+      object_node_->setInheritScale(true);
 
       attachMesh();
     }
